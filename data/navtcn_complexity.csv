@@ -1,0 +1,2 @@
+﻿model,param_n,mc_scene_n,mc_sample_n,train_iter_n,train_time_s,infer_time_ms,device,gpu_name,optimizer,lr,wd
+NavTCN,3759,8,160,500,18.131130399997346,14.24725999997463,cuda,NVIDIA GeForce RTX 4070 Laptop GPU,Adam,0.005,0.0001

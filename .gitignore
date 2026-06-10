@@ -1,0 +1,24 @@
+﻿# Python cache
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Runtime caches and local environments
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+.env
+
+# Large/generated raw simulation dumps
+outputs/*.npz
+outputs/*.pt
+outputs/*.pth
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
