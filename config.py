@@ -284,7 +284,6 @@ class AblNtcnCfg:
     use_no_corr: bool = True
     use_no_slow: bool = True
     use_no_gain: bool = True
-    use_no_sig: bool = True
     use_no_post_res: bool = True
     use_no_batch: bool = True
 

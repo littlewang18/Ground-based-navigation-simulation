@@ -29,14 +29,13 @@ from sim.tracking import track
 from sim.tx_signal import gen_tx
 
 
-_MODEL_ORDER = ["baseline", "full", "no_corr", "no_slow", "no_gain", "no_sig", "no_post_res", "no_batch"]
+_MODEL_ORDER = ["baseline", "full", "no_corr", "no_slow", "no_gain", "no_post_res", "no_batch"]
 _MODEL_LABEL = {
     "baseline": "baseline",
     "full": "full",
     "no_corr": "no_corr",
     "no_slow": "no_slow",
     "no_gain": "no_gain",
-    "no_sig": "no_sigma",
     "no_post_res": "no_post_res",
     "no_batch": "no_batch",
 }
@@ -46,7 +45,6 @@ _MODEL_COLOR = {
     "no_corr": "#E45756",
     "no_slow": "#54A24B",
     "no_gain": "#4C78A8",
-    "no_sig": "#B279A2",
     "no_post_res": "#72B7B2",
     "no_batch": "#F58518",
 }
@@ -108,8 +106,6 @@ def _build_variants(cfg: Cfg) -> dict[str, Cfg]:
                 slow_gain_scene_k=0.0,
             ),
         )
-    if abl.use_no_sig:
-        out["no_sig"] = replace(cfg, ntcn=replace(cfg.ntcn, post_sig_pred_use=0.0, post_sig_res_use=1.0))
     if abl.use_no_post_res:
         out["no_post_res"] = replace(cfg, ntcn=replace(cfg.ntcn, post_sig_pred_use=1.0, post_sig_res_use=0.0))
     if abl.use_no_batch:
